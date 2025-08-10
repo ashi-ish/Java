@@ -19,7 +19,7 @@
 class Main {
     public static void main(String[] args) {
         StringBuilder compressed = new StringBuilder();
-        String input = "aabbcc";
+        String input = "aabbccccccaaa";
         char currentChar = input.charAt(0);
         int count = 1;
         for (int i = 1; i < input.length(); i++) {
