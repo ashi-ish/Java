@@ -19,20 +19,20 @@
 class Main {
     public static void main(String[] args) {
         StringBuilder compressed = new StringBuilder();
-        String str = "aabbcc";
-        char currentChar = str.charAt(0);
+        String input = "aabbcc";
+        char currentChar = input.charAt(0);
         int count = 1;
-        for (int i = 1; i < str.length(); i++) {
-            if (currentChar == str.charAt(i)) {
+        for (int i = 1; i < input.length(); i++) {
+            if (currentChar == input.charAt(i)) {
                 count++;
             } else {
                 compressed.append(currentChar).append(count);
-                currentChar = str.charAt(i);
+                currentChar = input.charAt(i);
                 count = 1;
             }
         }
         compressed.append(currentChar).append(count);
         String result = compressed.toString();
-        System.out.println(result.length() < str.length() ? result : str);
+        System.out.println(result.length() < input.length() ? result : input);
     }
 }
